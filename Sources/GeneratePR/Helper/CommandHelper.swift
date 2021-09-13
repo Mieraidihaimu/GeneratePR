@@ -12,7 +12,7 @@ struct CommandHelper {
         """
         # Related links
 
-        close https://github.com/%1$@/issues/%2$@
+        close https://github.com/%1$@
 
         # Why?
 
@@ -21,9 +21,9 @@ struct CommandHelper {
         # How?
 
         Changes included:
-        %3$@
+        %2$@
 
-        %4$@
+        %3$@
 
         # Screenshots
 
@@ -39,7 +39,7 @@ struct CommandHelper {
         """
         # Related links
 
-        https://github.com/%1$@/issues/%2$@
+        https://github.com/%1$@
 
         # Why?
 
@@ -48,9 +48,9 @@ struct CommandHelper {
         # How?
 
         Changes included:
-        %3$@
+        %2$@
 
-        %4$@
+        %3$@
 
         # Screenshots
 
@@ -63,16 +63,14 @@ struct CommandHelper {
     }
 
     static func generateDescription(
-        issuePath: String,
-        issueId: String,
+        issue: String,
         prType: PRType,
         commitLogs: String,
         extra: String
     ) -> String {
         String(
             format: prType == .feature ? featurePRTemplate : fixPRTemplate,
-            "\(issuePath)",
-            "\(issueId)",
+            "\(issue)",
             "\(commitLogs)",
             "\(extra)"
         )

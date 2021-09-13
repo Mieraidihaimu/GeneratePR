@@ -31,17 +31,17 @@ struct CreatePRCommand: ParsableCommand {
     @Argument(help: "The pull request title")
     var title: String
 
-    @Option(help: "The PR extra description for pull request. ")
+    @Option(name: [.customLong("extra pull request description"), .customShort("e")], help: "The PR extra description for pull request. ")
     var extra: String?
 
-    @Option(help: "The base branch which the pull requests will be open to, default is main")
+    @Option(name: [.customLong("base branch"), .customShort("b")], help: "The base branch which the pull requests will be open to, default is main")
     var baseBranch: String = "main"
 
     @Flag(help: "The PR type: is it a feature or bug fix PR?. Default value is feature PR.")
     var type: PRType = .feature
 
-    @Argument(help: "The github issue board path. For instance, in issue URL https://github.com/randomX/repoY/issues/1060, the `randomX/repoY` is the issue path")
-    var issuePath: String
+    @Argument(help: "Linked github issue path. For instance, in issue URL https://github.com/randomX/repoY/issues/1060, the `randomX/repoY/issues/1060` is the issue path")
+    var issue: String
 
     @Argument(help: "The github product issue id")
     var issueId: String
@@ -62,7 +62,7 @@ struct CreatePRCommand: ParsableCommand {
 
         // 2. Generate full pr description
         let prDescription = CommandHelper.generateDescription(
-            issuePath: issuePath, issueId: issueId, prType: type, commitLogs: outputCommitLogs, extra: extra ?? ""
+            issue: issue, prType: type, commitLogs: outputCommitLogs, extra: extra ?? ""
         )
 
         // 3. Push the working branch to remote origin. At the moment, `gh pr create` will not push branch to the server https://github.com/cli/cli/issues/1718. Thus, we need to manually push the working branch to origin
