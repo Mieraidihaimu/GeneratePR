@@ -9,12 +9,12 @@ A Swift command-line tool to generate a pull request by taking the leverage of G
 
 ## Details
 
-The intension of this command line tool is to automate some of the redundant manual processes. I have used `swift-argument-parser` and `github-cli`. It will:\n
-1. Get all the commit logs against the base branch\n
-2. Generate full pr description according to git commit logs and given optional extra description.\n
-3. Push the working branch to remote origin. At the moment, `gh pr create` will not push branch to the server https://github.com/cli/cli/issues/1718. Thus, we need to manually push the working branch to origin\n
-4. Create pull request by using `gh pr create`\n
-5. Optional, it will open the created pull request url on the default browser.\n
+The intension of this command line tool is to automate some of the redundant manual processes. I have used `swift-argument-parser` and `github-cli`. It will:
+1. Get all the commit logs against the base branch
+2. Generate full pr description according to git commit logs and given optional extra description.
+3. Push the working branch to remote origin. At the moment, `gh pr create` will not push branch to the server https://github.com/cli/cli/issues/1718. Thus, we need to manually push the working branch to origin
+4. Create pull request by using `gh pr create`
+5. Optional, it will open the created pull request url on the default browser.
 
 ## 🌟 Pre-requisition 
 
