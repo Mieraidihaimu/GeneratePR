@@ -43,7 +43,7 @@ gen-pr "title" "Mieraidihaimu/GeneratePR/issues/1" -e "no need to panic" --fix -
 
 then you can sit back and relex.
 
-To learn more please use `--help` or visit `https://github.com/Mieraidihaimu/GeneratePR`
+To learn more please use `gen-pr --help` or visit `https://github.com/Mieraidihaimu/GeneratePR`
 
 ## 🌝 Contribute
 

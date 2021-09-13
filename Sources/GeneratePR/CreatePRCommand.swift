@@ -40,7 +40,7 @@ struct CreatePRCommand: ParsableCommand {
     @Flag(help: "The PR type: is it a feature or bug fix PR?. Default value is feature PR.")
     var type: PRType = .feature
 
-    @Argument(help: "Linked github issue path. For instance, in issue URL https://github.com/randomX/repoY/issues/1060, the `randomX/repoY/issues/1060` is the issue path")
+    @Argument(help: "Linked cookpad github issue id. For instance, in issue URL https://github.com/cookpad/product-delivery/issues/1060, the `1060` is the issue id")
     var issue: String
 
     @Flag(name: [.customLong("verbose"), .customShort("v")], help: "Show logs, information and non blocking messages.")

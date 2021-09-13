@@ -12,7 +12,7 @@ struct CommandHelper {
         """
         # Related links
 
-        close https://github.com/%1$@
+        close https://github.com/cookpad/product-delivery/issues/%1$@
 
         # Why?
 
@@ -39,7 +39,7 @@ struct CommandHelper {
         """
         # Related links
 
-        https://github.com/%1$@
+        https://github.com/cookpad/product-delivery/issues/%1$@
 
         # Why?
 
