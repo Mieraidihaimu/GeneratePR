@@ -1,1 +1,1 @@
-print("Hello, world!")
+CreatePRCommand.main()
