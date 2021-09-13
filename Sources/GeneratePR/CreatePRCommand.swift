@@ -15,8 +15,8 @@ enum PRType: EnumerableFlag {
 
 struct CreatePRCommand: ParsableCommand {
     static var configuration = CommandConfiguration(
-        commandName: "create-pr",
-        abstract: "A Swift command-line tool to create pull request by taking the leverage of GITHUT CLI and git commits",
+        commandName: "gen-pr",
+        abstract: "A Swift command-line tool to generate a pull request by taking the leverage of GITHUT CLI and git commit logs on current branch",
         discussion: """
             The intension of this command line tool is to automate some of the redundant manual processes. It will:\n
                     1. Get all the commit logs against the base branch\n
