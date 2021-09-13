@@ -41,7 +41,30 @@ once you have moved binary file as gen-pr, you can start creating PR like
 gen-pr "title" "Mieraidihaimu/GeneratePR/issues/1" -e "no need to panic" --fix -o
 ```
 
-then you can sit back and relex.
+then you can sit back and relex. Here are the usage
+
+```shell
+USAGE: gen-pr <title> [--extra-description <extra-description>] [--base-branch <base-branch>] [--feature] [--fix] <issue> [--verbose] [--open-URL]
+
+ARGUMENTS:
+  <title>                 The pull request title
+  <issue>                 Linked github issue path. For instance, in issue URL
+                          https://github.com/randomX/repoY/issues/1060, the
+                          `randomX/repoY/issues/1060` is the issue path
+
+OPTIONS:
+  -e, --extra-description <extra-description>
+                          The PR extra description for pull request.
+  -b, --base-branch <base-branch>
+                          The base branch which the pull requests will be open
+                          to, default is main (default: main)
+  --feature/--fix         The PR type: is it a feature or bug fix PR?. Default
+                          value is feature PR. (default: feature)
+  -v, --verbose           Show logs, information and non blocking messages.
+  -o, --open-URL          Open Pull request URL on default browser.
+  -h, --help              Show help information.
+
+```
 
 To learn more please use `--help` or visit `https://github.com/Mieraidihaimu/GeneratePR`
 
