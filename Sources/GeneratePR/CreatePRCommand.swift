@@ -31,10 +31,10 @@ struct CreatePRCommand: ParsableCommand {
     @Argument(help: "The pull request title")
     var title: String
 
-    @Option(name: [.customLong("extra pull request description"), .customShort("e")], help: "The PR extra description for pull request. ")
+    @Option(name: [.customLong("extra-description"), .customShort("e")], help: "The PR extra description for pull request. ")
     var extra: String?
 
-    @Option(name: [.customLong("base branch"), .customShort("b")], help: "The base branch which the pull requests will be open to, default is main")
+    @Option(name: [.customLong("base-branch"), .customShort("b")], help: "The base branch which the pull requests will be open to, default is main")
     var baseBranch: String = "main"
 
     @Flag(help: "The PR type: is it a feature or bug fix PR?. Default value is feature PR.")
@@ -49,7 +49,7 @@ struct CreatePRCommand: ParsableCommand {
     @Flag(name: [.customLong("verbose"), .customShort("v")], help: "Show logs, information and non blocking messages.")
     var verbose = false
 
-    @Flag(name: [.customLong("open pull request URL"), .customShort("o")], help: "Open Pull request URL on default browser.")
+    @Flag(name: [.customLong("open-URL"), .customShort("o")], help: "Open Pull request URL on default browser.")
     var openUrl = false
 
     func run() throws {
