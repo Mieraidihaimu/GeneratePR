@@ -1,6 +1,6 @@
 # GeneratePR
 
-A Swift command-line tool to generate a pull request by taking the leverage of GITHUT CLI and git commit logs on current branch
+A Swift command-line tool to generate a pull request by taking the leverage of GITHUT CLI and git commit logs on current branch, then create a draft Pull requests.
 
 ## 📋 Supported OS & SDK Versions
 
