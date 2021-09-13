@@ -43,9 +43,6 @@ struct CreatePRCommand: ParsableCommand {
     @Argument(help: "Linked github issue path. For instance, in issue URL https://github.com/randomX/repoY/issues/1060, the `randomX/repoY/issues/1060` is the issue path")
     var issue: String
 
-    @Argument(help: "The github product issue id")
-    var issueId: String
-
     @Flag(name: [.customLong("verbose"), .customShort("v")], help: "Show logs, information and non blocking messages.")
     var verbose = false
 
