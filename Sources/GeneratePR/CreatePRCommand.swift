@@ -35,7 +35,7 @@ struct CreatePRCommand: ParsableCommand {
     var extra: String?
 
     @Option(name: [.customLong("base-branch"), .customShort("b")], help: "The base branch which the pull requests will be open to, default is main")
-    var baseBranch: String = "main"
+    var baseBranch: String = "master"
 
     @Flag(help: "The PR type: is it a feature or bug fix PR?. Default value is feature PR.")
     var type: PRType = .feature
