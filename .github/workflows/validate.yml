@@ -18,6 +18,10 @@ jobs:
         brew list mint > /dev/null || brew install mint
         brew list gh > /dev/null || brew install gh
         echo "🖥️ The workflow is now ready to test your code on the runner."
+    - name: Clone a demo branch
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run:
         git clone git@github.com:Mieraidihaimu/GeneratePR.git
         git checkout m/ckp
         mint run GeneratePR "Test" "123" --fix
