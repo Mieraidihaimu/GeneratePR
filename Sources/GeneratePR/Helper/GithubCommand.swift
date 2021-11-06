@@ -11,7 +11,7 @@ struct GithubCommand {
     let baseBranch: String
 
     var allCommits: String {
-        "git log --no-merges --pretty=%s --graph \(baseBranch).."
+        "git log --reverse --no-merges --pretty=%s \(baseBranch)..HEAD"
     }
 
     func createPR(title: String, description: String) -> String {
