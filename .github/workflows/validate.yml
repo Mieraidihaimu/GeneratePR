@@ -23,6 +23,10 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run:
         git clone git@github.com:Mieraidihaimu/GeneratePR.git
+    - name: Clone a demo branch
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
         git checkout m/ckp
         mint run GeneratePR "Test" "123" --fix
 
