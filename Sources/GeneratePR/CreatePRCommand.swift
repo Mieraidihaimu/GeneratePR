@@ -56,10 +56,11 @@ struct CreatePRCommand: ParsableCommand {
 
         // 1. Get all the commit logs against the base branch
         let outputCommitLogs = ShellScripRunner.runShell(command: githubCommand.allCommits)
+        let formattedCommitLogs = CommitLogsFormatter.format(commitLogsOutput: outputCommitLogs)
 
         // 2. Generate full pr description
         let prDescription = CommandHelper.generateDescription(
-            issue: issue, prType: type, commitLogs: outputCommitLogs, extra: extra ?? ""
+            issue: issue, prType: type, commitLogs: formattedCommitLogs, extra: extra ?? ""
         )
 
         // 3. Push the working branch to remote origin. At the moment, `gh pr create` will not push branch to the server https://github.com/cli/cli/issues/1718. Thus, we need to manually push the working branch to origin
