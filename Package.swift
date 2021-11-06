@@ -5,6 +5,11 @@ import PackageDescription
 
 let package = Package(
     name: "GeneratePR",
+    products: [
+        .executable(
+            name: "GeneratePR",
+            targets: ["GeneratePR"]),
+    ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
     ],

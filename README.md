@@ -68,6 +68,31 @@ OPTIONS:
 
 To learn more please use `--help` or visit `https://github.com/Mieraidihaimu/GeneratePR`
 
+## 🌱 Use with Mint
+
+1. Install [Mint](https://github.com/yonaskolb/Mint#installing)
+
+2. Run GeneratePR on the fly
+
+    ```sh
+    $ mint run Mieraidihaimu/GeneratePR@main ...
+    ```
+
+    or install the package locally
+
+    ```sh
+    $ mint install Mieraidihaimu/GeneratePR@main
+    🌱 Cloning GeneratePR main
+    🌱 Resolving package
+    🌱 Building package
+    🌱 Installed GeneratePR main
+    🌱 Linked GeneratePR main to ~/.mint/bin
+    🌱 ~/.mint/bin must be added to your $PATH if you wish to run this package outside of mint
+
+    $ type GeneratePR
+    GeneratePR is ~/.mint/bin/GeneratePR
+    ```
+
 ## 🌝 Contribute
 
 1. Fork it! 👀
