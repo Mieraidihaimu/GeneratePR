@@ -16,7 +16,7 @@ The intension of this command line tool is to automate some of the redundant man
 4. Create pull request by using `gh pr create`
 5. Optional, it will open the created pull request url on the default browser.
 
-## 🌟 Pre-requisition 
+## 🌟 Pre-requisition
 
 For now, need to be in Mac enviroment with git command line tool and github cli installed,
 
@@ -31,8 +31,7 @@ Ready Set goal ~~~~~
 ```shell
 git clone https://github.com/Mieraidihaimu/GeneratePR.git
 cd GeneratePR
-swift build -c release
-cp .build/release/GeneratePR /usr/local/bin/gen-pr
+make
 ```
 
 once you have moved binary file as gen-pr, you can start creating PR like
