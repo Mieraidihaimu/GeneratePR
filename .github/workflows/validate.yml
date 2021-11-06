@@ -15,7 +15,8 @@ jobs:
       run: swift build -c release
     - name: Run dependencies
       run: |
-        brew install mint swiftlint gh
+        brew list mint > /dev/null || brew install mint
+        brew list gh > /dev/null || brew install gh
         echo "🖥️ The workflow is now ready to test your code on the runner."
         git clone git@github.com:Mieraidihaimu/GeneratePR.git
         git checkout m/ckp
