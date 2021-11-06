@@ -21,10 +21,6 @@ struct CommitLogsFormatter {
 
     private static func formatLineIfNeeded(_ line: String) -> String {
         guard line.prefix(2) != linePrefixCharacter else { return line }
-        if #available(macOS 10.11, *) {
-            return linePrefixCharacter + line.localizedCapitalized
-        } else {
-            return linePrefixCharacter + line
-        }
+        return linePrefixCharacter + line
     }
 }
