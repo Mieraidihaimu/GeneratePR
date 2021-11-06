@@ -32,7 +32,7 @@ Ready Set goal ~~~~~
 git clone https://github.com/Mieraidihaimu/GeneratePR.git
 cd GeneratePR
 
-#This will build, and export `gen-pr` and install dependency package Github CLI
+#This will build, export the executable binary `gen-pr` and install dependency package Github CLI
 make
 ```
 
