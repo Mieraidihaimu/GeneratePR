@@ -7,4 +7,5 @@ install:
 
 .PHONY: bootstrap
 bootstrap:
-	./scripts/bootstrap.sh
+	brew list gh > /dev/null || brew install gh
+	brew outdated gh || brew upgrade gh
