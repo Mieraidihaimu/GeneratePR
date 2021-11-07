@@ -21,7 +21,7 @@ The intension of this command line tool is to automate some of the redundant man
 For now, need to be in Mac enviroment with git command line tool and github cli installed,
 
 - [ ] Install git https://github.com/git-guides/install-git
-- [ ] Install github cli command line tool https://github.com/cli/cli
+- [ ] Install homebrew https://github.com/Homebrew/install
 
 
 ## 🔮 Installation & Example
@@ -31,6 +31,8 @@ Ready Set goal ~~~~~
 ```shell
 git clone https://github.com/Mieraidihaimu/GeneratePR.git
 cd GeneratePR
+
+#This will build, export the executable binary `gen-pr` and install dependency package Github CLI
 make
 ```
 
