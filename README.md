@@ -67,7 +67,7 @@ OPTIONS:
 
 ```
 
-To learn more please use `--help` or visit `https://github.com/Mieraidihaimu/GeneratePR`
+To learn more please use `gen-pr --help` or visit `https://github.com/Mieraidihaimu/GeneratePR`
 
 ## 🌱 Use with Mint
 
